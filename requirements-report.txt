@@ -1,0 +1,4 @@
+# Optional: only for building the single final submission PDF.
+# Not needed by the deployed Streamlit app.
+mistune>=3.0,<4
+weasyprint>=62,<70
