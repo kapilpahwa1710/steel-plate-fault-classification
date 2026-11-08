@@ -1,0 +1,679 @@
+{
+  "dataset": "Steel Plates Faults (UCI #198)",
+  "official_dataset_page": "https://archive.ics.uci.edu/dataset/198/steel+plates+faults",
+  "doi": "https://doi.org/10.24432/C5J88N",
+  "source_license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "total_rows": 1941,
+  "training_rows": 1455,
+  "test_rows": 486,
+  "test_fraction": 0.25,
+  "split_seed": 91,
+  "split_type": "stratified, fixed random_state",
+  "feature_names": [
+    "X_Minimum",
+    "X_Maximum",
+    "Y_Minimum",
+    "Y_Maximum",
+    "Pixels_Areas",
+    "X_Perimeter",
+    "Y_Perimeter",
+    "Sum_of_Luminosity",
+    "Minimum_of_Luminosity",
+    "Maximum_of_Luminosity",
+    "Length_of_Conveyer",
+    "TypeOfSteel_A300",
+    "TypeOfSteel_A400",
+    "Steel_Plate_Thickness",
+    "Edges_Index",
+    "Empty_Index",
+    "Square_Index",
+    "Outside_X_Index",
+    "Edges_X_Index",
+    "Edges_Y_Index",
+    "Outside_Global_Index",
+    "LogOfAreas",
+    "Log_X_Index",
+    "Log_Y_Index",
+    "Orientation_Index",
+    "Luminosity_Index",
+    "SigmoidOfAreas"
+  ],
+  "target": "Fault_Type",
+  "class_names": [
+    "Pastry",
+    "Z_Scratch",
+    "K_Scatch",
+    "Stains",
+    "Dirtiness",
+    "Bumps",
+    "Other_Faults"
+  ],
+  "class_distribution": {
+    "Other_Faults": 673,
+    "Bumps": 402,
+    "K_Scatch": 391,
+    "Z_Scratch": 190,
+    "Pastry": 158,
+    "Stains": 72,
+    "Dirtiness": 55
+  },
+  "test_class_distribution": {
+    "Other_Faults": 168,
+    "Bumps": 101,
+    "K_Scatch": 98,
+    "Z_Scratch": 48,
+    "Pastry": 39,
+    "Stains": 18,
+    "Dirtiness": 14
+  },
+  "test_csv_sha256": "bda6889887ed383e424f42f146a82178fb9720f9f6f6879ff5577d83aab5f5b5",
+  "model_files": {
+    "Logistic Regression": "model/logistic_regression.joblib",
+    "Decision Tree": "model/decision_tree.joblib",
+    "KNN": "model/knn.joblib",
+    "Naive Bayes": "model/naive_bayes.joblib",
+    "Support Vector Machine": "model/support_vector_machine.joblib"
+  },
+  "metrics": {
+    "Logistic Regression": {
+      "Accuracy": 0.6419753086419753,
+      "AUC": 0.9236524543770553,
+      "Precision": 0.6068574026222809,
+      "Recall": 0.7370490973744156,
+      "F1": 0.6428452166962337,
+      "MCC": 0.575794495020296
+    },
+    "Decision Tree": {
+      "Accuracy": 0.654320987654321,
+      "AUC": 0.8640599240841477,
+      "Precision": 0.6641145801746152,
+      "Recall": 0.7238604060563043,
+      "F1": 0.6805738769223986,
+      "MCC": 0.5796711335506494
+    },
+    "KNN": {
+      "Accuracy": 0.7119341563786008,
+      "AUC": 0.9332272739554238,
+      "Precision": 0.7547043246239885,
+      "Recall": 0.7255526671191451,
+      "F1": 0.7315692184964101,
+      "MCC": 0.6324450312087747
+    },
+    "Naive Bayes": {
+      "Accuracy": 0.5905349794238683,
+      "AUC": 0.9105153036584273,
+      "Precision": 0.6170951171580156,
+      "Recall": 0.7038630724476349,
+      "F1": 0.624229414902504,
+      "MCC": 0.5263355985439064
+    },
+    "Support Vector Machine": {
+      "Accuracy": 0.7181069958847737,
+      "AUC": 0.9445329979098123,
+      "Precision": 0.7285979130250543,
+      "Recall": 0.7883143102379311,
+      "F1": 0.7507444574543239,
+      "MCC": 0.6520920963086285
+    }
+  },
+  "per_class_report": {
+    "Logistic Regression": {
+      "Pastry": {
+        "precision": 0.46551724137931033,
+        "recall": 0.6923076923076923,
+        "f1-score": 0.5567010309278351,
+        "support": 39.0
+      },
+      "Z_Scratch": {
+        "precision": 0.5526315789473685,
+        "recall": 0.875,
+        "f1-score": 0.6774193548387096,
+        "support": 48.0
+      },
+      "K_Scatch": {
+        "precision": 0.8584905660377359,
+        "recall": 0.9285714285714286,
+        "f1-score": 0.8921568627450981,
+        "support": 98.0
+      },
+      "Stains": {
+        "precision": 0.6956521739130435,
+        "recall": 0.8888888888888888,
+        "f1-score": 0.7804878048780488,
+        "support": 18.0
+      },
+      "Dirtiness": {
+        "precision": 0.36666666666666664,
+        "recall": 0.7857142857142857,
+        "f1-score": 0.5,
+        "support": 14.0
+      },
+      "Bumps": {
+        "precision": 0.5849056603773585,
+        "recall": 0.6138613861386139,
+        "f1-score": 0.5990338164251208,
+        "support": 101.0
+      },
+      "Other_Faults": {
+        "precision": 0.7241379310344828,
+        "recall": 0.375,
+        "f1-score": 0.49411764705882355,
+        "support": 168.0
+      }
+    },
+    "Decision Tree": {
+      "Pastry": {
+        "precision": 0.39705882352941174,
+        "recall": 0.6923076923076923,
+        "f1-score": 0.5046728971962616,
+        "support": 39.0
+      },
+      "Z_Scratch": {
+        "precision": 0.8043478260869565,
+        "recall": 0.7708333333333334,
+        "f1-score": 0.7872340425531915,
+        "support": 48.0
+      },
+      "K_Scatch": {
+        "precision": 0.8666666666666667,
+        "recall": 0.9285714285714286,
+        "f1-score": 0.896551724137931,
+        "support": 98.0
+      },
+      "Stains": {
+        "precision": 0.8421052631578947,
+        "recall": 0.8888888888888888,
+        "f1-score": 0.8648648648648649,
+        "support": 18.0
+      },
+      "Dirtiness": {
+        "precision": 0.5263157894736842,
+        "recall": 0.7142857142857143,
+        "f1-score": 0.6060606060606061,
+        "support": 14.0
+      },
+      "Bumps": {
+        "precision": 0.52,
+        "recall": 0.6435643564356436,
+        "f1-score": 0.5752212389380531,
+        "support": 101.0
+      },
+      "Other_Faults": {
+        "precision": 0.6923076923076923,
+        "recall": 0.42857142857142855,
+        "f1-score": 0.5294117647058824,
+        "support": 168.0
+      }
+    },
+    "KNN": {
+      "Pastry": {
+        "precision": 0.6086956521739131,
+        "recall": 0.358974358974359,
+        "f1-score": 0.45161290322580644,
+        "support": 39.0
+      },
+      "Z_Scratch": {
+        "precision": 0.7543859649122807,
+        "recall": 0.8958333333333334,
+        "f1-score": 0.819047619047619,
+        "support": 48.0
+      },
+      "K_Scatch": {
+        "precision": 0.9578947368421052,
+        "recall": 0.9285714285714286,
+        "f1-score": 0.9430051813471503,
+        "support": 98.0
+      },
+      "Stains": {
+        "precision": 0.8421052631578947,
+        "recall": 0.8888888888888888,
+        "f1-score": 0.8648648648648649,
+        "support": 18.0
+      },
+      "Dirtiness": {
+        "precision": 0.9090909090909091,
+        "recall": 0.7142857142857143,
+        "f1-score": 0.8,
+        "support": 14.0
+      },
+      "Bumps": {
+        "precision": 0.5354330708661418,
+        "recall": 0.6732673267326733,
+        "f1-score": 0.5964912280701754,
+        "support": 101.0
+      },
+      "Other_Faults": {
+        "precision": 0.6753246753246753,
+        "recall": 0.6190476190476191,
+        "f1-score": 0.6459627329192547,
+        "support": 168.0
+      }
+    },
+    "Naive Bayes": {
+      "Pastry": {
+        "precision": 0.3258426966292135,
+        "recall": 0.7435897435897436,
+        "f1-score": 0.453125,
+        "support": 39.0
+      },
+      "Z_Scratch": {
+        "precision": 0.7755102040816326,
+        "recall": 0.7916666666666666,
+        "f1-score": 0.7835051546391752,
+        "support": 48.0
+      },
+      "K_Scatch": {
+        "precision": 0.8947368421052632,
+        "recall": 0.8673469387755102,
+        "f1-score": 0.8808290155440415,
+        "support": 98.0
+      },
+      "Stains": {
+        "precision": 0.8421052631578947,
+        "recall": 0.8888888888888888,
+        "f1-score": 0.8648648648648649,
+        "support": 18.0
+      },
+      "Dirtiness": {
+        "precision": 0.35714285714285715,
+        "recall": 0.7142857142857143,
+        "f1-score": 0.47619047619047616,
+        "support": 14.0
+      },
+      "Bumps": {
+        "precision": 0.4791666666666667,
+        "recall": 0.6831683168316832,
+        "f1-score": 0.563265306122449,
+        "support": 101.0
+      },
+      "Other_Faults": {
+        "precision": 0.6451612903225806,
+        "recall": 0.23809523809523808,
+        "f1-score": 0.34782608695652173,
+        "support": 168.0
+      }
+    },
+    "Support Vector Machine": {
+      "Pastry": {
+        "precision": 0.5,
+        "recall": 0.717948717948718,
+        "f1-score": 0.5894736842105263,
+        "support": 39.0
+      },
+      "Z_Scratch": {
+        "precision": 0.7096774193548387,
+        "recall": 0.9166666666666666,
+        "f1-score": 0.8,
+        "support": 48.0
+      },
+      "K_Scatch": {
+        "precision": 0.978494623655914,
+        "recall": 0.9285714285714286,
+        "f1-score": 0.9528795811518325,
+        "support": 98.0
+      },
+      "Stains": {
+        "precision": 0.8,
+        "recall": 0.8888888888888888,
+        "f1-score": 0.8421052631578947,
+        "support": 18.0
+      },
+      "Dirtiness": {
+        "precision": 0.8,
+        "recall": 0.8571428571428571,
+        "f1-score": 0.8275862068965517,
+        "support": 14.0
+      },
+      "Bumps": {
+        "precision": 0.5862068965517241,
+        "recall": 0.6732673267326733,
+        "f1-score": 0.6267281105990783,
+        "support": 101.0
+      },
+      "Other_Faults": {
+        "precision": 0.7258064516129032,
+        "recall": 0.5357142857142857,
+        "f1-score": 0.6164383561643836,
+        "support": 168.0
+      }
+    }
+  },
+  "confusion_matrices": {
+    "Logistic Regression": [
+      [
+        27,
+        2,
+        2,
+        0,
+        4,
+        1,
+        3
+      ],
+      [
+        1,
+        42,
+        0,
+        0,
+        1,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        91,
+        1,
+        0,
+        3,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        16,
+        0,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        11,
+        0,
+        1
+      ],
+      [
+        9,
+        9,
+        1,
+        1,
+        6,
+        62,
+        13
+      ],
+      [
+        19,
+        23,
+        12,
+        5,
+        8,
+        38,
+        63
+      ]
+    ],
+    "Decision Tree": [
+      [
+        27,
+        1,
+        0,
+        0,
+        2,
+        5,
+        4
+      ],
+      [
+        3,
+        37,
+        0,
+        0,
+        0,
+        2,
+        6
+      ],
+      [
+        1,
+        0,
+        91,
+        1,
+        0,
+        0,
+        5
+      ],
+      [
+        0,
+        0,
+        0,
+        16,
+        0,
+        2,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        10,
+        0,
+        0
+      ],
+      [
+        7,
+        2,
+        2,
+        2,
+        6,
+        65,
+        17
+      ],
+      [
+        26,
+        6,
+        12,
+        0,
+        1,
+        51,
+        72
+      ]
+    ],
+    "KNN": [
+      [
+        14,
+        2,
+        0,
+        0,
+        0,
+        8,
+        15
+      ],
+      [
+        0,
+        43,
+        0,
+        0,
+        0,
+        2,
+        3
+      ],
+      [
+        0,
+        0,
+        91,
+        0,
+        0,
+        2,
+        5
+      ],
+      [
+        0,
+        0,
+        0,
+        16,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        10,
+        0,
+        4
+      ],
+      [
+        3,
+        4,
+        1,
+        2,
+        0,
+        68,
+        23
+      ],
+      [
+        6,
+        8,
+        3,
+        1,
+        1,
+        45,
+        104
+      ]
+    ],
+    "Naive Bayes": [
+      [
+        29,
+        4,
+        2,
+        0,
+        0,
+        2,
+        2
+      ],
+      [
+        5,
+        38,
+        0,
+        0,
+        0,
+        0,
+        5
+      ],
+      [
+        2,
+        0,
+        85,
+        0,
+        0,
+        3,
+        8
+      ],
+      [
+        1,
+        0,
+        0,
+        16,
+        0,
+        1,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        0,
+        10,
+        0,
+        0
+      ],
+      [
+        18,
+        2,
+        1,
+        1,
+        3,
+        69,
+        7
+      ],
+      [
+        30,
+        5,
+        7,
+        2,
+        15,
+        69,
+        40
+      ]
+    ],
+    "Support Vector Machine": [
+      [
+        28,
+        3,
+        0,
+        0,
+        0,
+        2,
+        6
+      ],
+      [
+        1,
+        44,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        91,
+        0,
+        0,
+        2,
+        5
+      ],
+      [
+        0,
+        0,
+        0,
+        16,
+        0,
+        2,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        12,
+        0,
+        0
+      ],
+      [
+        7,
+        4,
+        0,
+        1,
+        1,
+        68,
+        20
+      ],
+      [
+        18,
+        11,
+        2,
+        3,
+        2,
+        42,
+        90
+      ]
+    ]
+  },
+  "winner": "Support Vector Machine",
+  "winner_rule": "Highest macro-F1; MCC then macro OvR AUC break ties",
+  "evaluation_definitions": {
+    "Accuracy": "Correct classifications divided by total test records",
+    "AUC": "Macro-average of seven one-vs-rest ROC AUC values (predict_proba)",
+    "Precision": "Unweighted (macro) mean of seven class precision values",
+    "Recall": "Unweighted (macro) mean of seven class recall values",
+    "F1": "Unweighted (macro) mean of seven per-class F1 values",
+    "MCC": "Single multiclass Matthews correlation coefficient"
+  },
+  "scikit_learn_version": "1.7.2"
+}
